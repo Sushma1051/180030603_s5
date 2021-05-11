@@ -1,4 +1,4 @@
-package loops;
+package arrays;
 
 import java.util.Scanner;
 public class twentythree {

@@ -1,7 +1,8 @@
-package loops;
+package arrays;
 import java.util.Arrays;
 import java.util.Scanner;
-public class twentyone {
+public class twentyone 
+{
 public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);

@@ -1,35 +1,20 @@
-
-package loops;
+package arrays;
+import java.util.Arrays;
 import java.util.Scanner;
-public class twentytwo {
+public class twentyfive {
 public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
-		int k=sc.nextInt();
 		int n=sc.nextInt();
 		int a[]=new int[n];
-		int c=0;
 		for(int i=0;i<n;i++)
 		{
 			a[i]=sc.nextInt();
 		}
+		Arrays.sort(a);
 		for(int i=0;i<n;i++)
 		{
-			if(a[i]==k)
-			{
-				System.out.println("Found at index"+i);
-				c=1;
-				break;
-			}
-			else
-			{
-				c=0;
-			}
+			System.out.println(a[i]);
 		}
-		if(c==0)
-		{
-			System.out.println(-1);
-		}
-	}
-
+}
 }
