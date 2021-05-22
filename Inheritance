@@ -1,0 +1,221 @@
+class Animal {
+	 void eat()
+	 {
+	  System.out.println("Eat method from Animal class");
+	 }
+	 void sleep()
+	 {
+	  System.out.println("Sleep method from Animal Class");
+	 }
+
+	}
+	class Bird extends Animal
+	{
+	 void eat()
+	 {
+	  System.out.println("Eat method from Bird class");
+	 }
+	 void sleep()
+	 {
+	  System.out.println("Sleep method from Bird Class");
+	 }
+	 void fly()
+	 {
+	  System.out.println("Bird Flying....");
+	 }
+	}
+
+	public class Inheritance1{
+
+	 public static void main(String[] args) {
+	  // TODO Auto-generated method stub
+	  Animal a=new Animal();
+	  a.eat();
+	  a.sleep();
+	  Bird b=new Bird();
+	  b.eat();
+	  b.sleep();
+	  b.fly();
+
+	 }
+
+	}
+  
+  2)
+  class Person
+{
+ private String name;
+
+ public String getName() {
+  return name;
+ }
+
+ public void setName(String name) {
+  this.name = name;
+ }
+}
+class Employee extends Person
+{
+ double salary;
+ int joining;
+ String insurance_no;
+ public double getSalary() {
+  return salary;
+ }
+ public void setSalary(double salary) {
+  this.salary = salary;
+ }
+ public int getJoining() {
+  return joining;
+ }
+ public void setJoining(int joining) {
+  this.joining = joining;
+ }
+ public String getInsurance_no() {
+  return insurance_no;
+ }
+ public void setInsurance_no(String insurance_no) {
+  this.insurance_no = insurance_no;
+ }
+ 
+}
+public class Inheritance2{
+	public static void main(String[] args) {
+		  // TODO Auto-generated method stub
+		  Employee e=new Employee();
+		  e.setName("XYZ");
+		  e.setSalary(100000);
+		  e.setJoining(2022);
+		  e.setInsurance_no("ABSDH1234");
+		  System.out.println("Employee Details");
+		  System.out.println("Employee name"+e.getName());
+		  System.out.println("Employee Salary : "+e.getSalary());
+		  System.out.println("Employee joining date : "+e.getJoining());
+		  System.out.println("Employee insurance no : "+e.getInsurance_no());
+
+ }
+}
+3)
+class PersonDemo
+{
+ private String name;
+ private String dob;
+ public String getName() {
+  return name;
+ }
+ public void setName(String name) {
+  this.name = name;
+ }
+ public String getDob() {
+  return dob;
+ }
+ public void setDob(String dob) {
+  this.dob = dob;
+ }
+ 
+}
+class Teacher extends PersonDemo
+{
+ private double salary;
+ public String subject;
+ public double getSalary() {
+  return salary;
+ }
+ public void setSalary(double salary) {
+  this.salary = salary;
+ }
+ public String getSubject() {
+  return subject;
+ }
+ public void setSubject(String subject) {
+  this.subject = subject;
+ }
+ 
+}
+class Student extends PersonDemo
+{
+ int sid;
+
+ public int getSid() {
+  return sid;
+ }
+
+ public void setSid(int sid) {
+  this.sid = sid;
+ }
+ 
+}
+class CollegeStudent extends Student
+{
+ public String getClg_name() {
+  return clg_name;
+ }
+ public void setClg_name(String clg_name) {
+  this.clg_name = clg_name;
+ }
+ public String getYear() {
+  return year;
+ }
+ public void setYear(String year) {
+  this.year = year;
+ }
+ String clg_name;
+ String year;
+}
+public class Inheritance3 {
+
+ public static void main(String[] args) {
+  // TODO Auto-generated method stub
+  PersonDemo p=new PersonDemo();
+  p.setName("XYZ");
+  p.setDob("26-Mar-2001");
+  System.out.println("Person Details");
+  System.out.println("Person Name : "+p.getName());
+  System.out.println("Person dob : "+p.getDob());
+  
+  System.out.println();
+  
+  Teacher t=new Teacher();
+  t.setSalary(135000);
+  t.setDob("25jan");
+  t.setName("ABC");
+  t.setSubject("Programming");
+  System.out.println("Teacher Details");
+  System.out.println("Teacher Name : "+t.getName());
+  System.out.println("Teacher dob : "+t.getDob());
+  System.out.println("Teacher salary : "+t.getSalary());
+  System.out.println("Teacher subject : "+t.getSubject());
+  
+  System.out.println();
+  
+  
+  Student s=new Student();
+  s.setName("DEF");
+  s.setDob("20Feb");
+  s.setSid(31033);
+  System.out.println("Student Details");
+  System.out.println("Student Name : "+s.getName());
+  System.out.println("Student dob : "+s.getDob());
+  System.out.println("Student ID : "+s.getSid());
+  
+  System.out.println();
+  
+  
+  
+  CollegeStudent c=new CollegeStudent();
+  c.setName("GHI");
+  c.setDob("31Mar");
+  c.setSid(31033);
+  c.setClg_name("KLU");
+  c.setYear("fourth");
+  System.out.println("College Student  Details");
+  System.out.println("College Student Name : "+c.getName());
+  System.out.println("College Student dob : "+c.getDob());
+  System.out.println("College Student ID : "+c.getSid());
+  System.out.println("College Name : "+c.getClg_name());
+  System.out.println("Year of studying : "+c.getYear());
+  
+  
+ }
+
+}
