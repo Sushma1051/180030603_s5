@@ -1,0 +1,107 @@
+
+class Fruit{
+	protected String name;
+	protected String taste;
+	protected int size;
+	
+	public Fruit() {
+		name = "Fruit name";
+		taste = "Tase of the fruit";
+		size = 0;
+	}
+	
+	public void eat () {
+		System.out.println(name + " tastes like " + taste);
+	}
+
+}
+
+class Apple extends Fruit {
+	@Override
+	public void eat() {
+		System.out.println("It tastes like apple");
+	}
+
+}
+
+
+class Orange extends Fruit {
+	@Override
+	public void eat() {
+		System.out.println("It tastes like Orange");
+	}
+}
+
+public class Polymorphism1 {
+	public static void main(String[] args) {
+		new Fruit().eat();
+		new Apple().eat();
+		new Orange().eat();
+	}
+}
+
+2)
+
+class Shape {
+	public void draw() {
+		System.out.println("Drawing Shape");
+	}
+	
+	public void erase() {
+		System.out.println("Erasing Shape");
+	}
+}
+
+class Square extends Shape {
+	@Override
+	public void draw() {
+		System.out.println("Drawing Square");
+	}
+	
+	@Override
+	public void erase() {
+		System.out.println("Erasing Square");
+	}
+
+}
+class Triangle extends Shape {
+	@Override
+	public void draw() {
+		System.out.println("Drawing Triangle");
+	}
+	
+	@Override
+	public void erase() {
+		System.out.println("Erasing Triangle");
+	}
+
+}
+class Circle extends Shape {
+	@Override
+	public void draw() {
+		System.out.println("Drawing Circle");
+	}
+	
+	@Override
+	public void erase() {
+		System.out.println("Erasing Circle");
+	}
+
+}
+
+public class Polymorphism2 {
+	public static void main(String[] args) {
+		Shape c = new Circle();
+		Shape t = new Triangle();
+		Shape s = new Square();
+		
+		c.draw();
+		c.erase();
+		
+		t.draw();
+		t.erase();
+		
+		s.draw();
+		s.erase();
+	}
+}
